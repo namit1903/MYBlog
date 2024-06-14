@@ -13,6 +13,9 @@ const Login = () => {
   const {setUser}=useContext(UserContext)
   const navigate=useNavigate()
 
+
+  console.log("alert here 1:-",URL+"/api/auth/login")
+  console.log("alert here:-",`${window.location.origin}/api/auth/login"`)
   const handleLogin=async()=>{
     try{
       //yahn tk sahi chal rha hai
