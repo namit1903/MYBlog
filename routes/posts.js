@@ -8,7 +8,9 @@ const verifyToken = require('../verifyToken')
 
 //CREATE
 router.post("/create",verifyToken,async (req,res)=>{
+    // console.log("sab thik hai")
     try{
+        // console.log("sab thik hai")
         const newPost=new Post(req.body)//create a new instance of the Post model and pass values from req.body
         // console.log(req.body)
         const savedPost=await newPost.save()
@@ -16,7 +18,7 @@ router.post("/create",verifyToken,async (req,res)=>{
         res.status(200).json(savedPost)
     }
     catch(err){
-        
+        console.log("sab error thik hai")
         res.status(500).json(err)
     }
      

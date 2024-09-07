@@ -55,6 +55,7 @@ const Home = () => {
         {loader?<div className="h-[40vh] flex justify-center items-center"><Loader/></div>:!noResults?
         posts.map((post)=>(
           <>
+          {/* on click we navigate to post detail post is user is authenticated       */}
           <Link to={user?`/posts/post/${post._id}`:"/login"}>
           <HomePosts key={post._id} post={post}/>
           </Link>

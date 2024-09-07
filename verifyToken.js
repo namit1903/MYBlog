@@ -1,6 +1,7 @@
 const jwt=require('jsonwebtoken')
 
 const verifyToken=(req,res,next)=>{
+    console.log("sab  verify token me thik hai")
     const token=req.cookies.token
     // console.log(token)
     if(!token){

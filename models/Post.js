@@ -24,6 +24,9 @@ const PostSchema=new mongoose.Schema({
         type:String,
         required:true,  
     },
+    imgUrl:{
+        type:String,
+    },
     categories:{
         type:Array,
         

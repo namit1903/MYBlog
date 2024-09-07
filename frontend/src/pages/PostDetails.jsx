@@ -13,13 +13,13 @@ import Loader from "../components/Loader"
 
 const PostDetails = () => {
 // let{id}=useParams()
-  const postId=useParams().id
-  const [post,setPost]=useState({})
-  const {user}=useContext(UserContext)
-  const [comments,setComments]=useState([])
-  const [comment,setComment]=useState("")
-  const [loader,setLoader]=useState(false)
-  const navigate=useNavigate()
+  const postId=useParams().id;
+  const [post,setPost]=useState({});
+  const {user}=useContext(UserContext);
+  const [comments,setComments]=useState([]);
+  const [comment,setComment]=useState("");
+  const [loader,setLoader]=useState(false);
+  const navigate=useNavigate();
   
 
   const fetchPost=async()=>{
@@ -109,7 +109,7 @@ const PostDetails = () => {
        <p>{new Date(post.updatedAt).toString().slice(16,24)}</p>
        </div>
         </div>
-        <img src={IF+post.photo} className="w-full  mx-auto mt-8" alt=""/>
+        <img src={post.imgUrl} className="w-full  mx-auto mt-8" alt=""/>
          <p className="mx-auto mt-8">{post.desc}</p>
          <div className="flex items-center mt-8 space-x-4 font-semibold">
           <p>Categories:</p>
