@@ -18,6 +18,7 @@ export function UserContextProvider({children}){
     },[])
 
     const getUser=async()=>{
+      console.log("getUser in context printed")
       try{
         const res=await axios.get(URL+"/api/auth/refetch",{withCredentials:true})
         // console.log(res.data)
